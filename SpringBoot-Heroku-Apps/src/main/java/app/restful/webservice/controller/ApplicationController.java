@@ -11,7 +11,7 @@ public class ApplicationController {
 
 	@GetMapping("/name")
 	public String appName() {
-		return "SpringBootHerokuApps";
+		return "SpringBootHerokuApps says Hello!!";
 	}
 
 	@GetMapping("/user/{userName}")
