@@ -28,12 +28,12 @@ public class ApplicationController {
 		return "Welcome : " + user;
 	}
 	
-	@GetMapping("/user/getEmp")
+	@GetMapping("/getEmp")
 	public Employee getEmp() {
 		return empLoad();
 	}
 	
-	@PostMapping("/user/Emp")
+	@PostMapping("/Emp")
 	public Employee getEmployee(@RequestBody Employee e) {
 		System.out.println("Employee Recieved");
 		return empLoad();
