@@ -19,7 +19,7 @@ public class ApplicationController {
 
 	@GetMapping("/name")
 	public String appName() {
-		return "SpringBootHerokuApps says Hello!!";
+		return "SpringBootHerokuApps says Hello from Ashish!!";
 	}
 
 	@GetMapping("/user/{userName}")
