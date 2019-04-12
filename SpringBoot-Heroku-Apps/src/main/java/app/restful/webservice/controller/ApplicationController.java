@@ -15,7 +15,6 @@ import org.springframework.web.bind.annotation.RestController;
 
 import app.restful.webservice.model.EmpPhoneNum;
 import app.restful.webservice.model.Employee;
-import app.restful.webservice.model.Protegrity;
 
 @RestController
 @RequestMapping("/app")
