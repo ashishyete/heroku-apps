@@ -3,15 +3,19 @@ package app.restful.webservice.controller;
 import java.util.ArrayList;
 import java.util.List;
 
+import javax.servlet.http.HttpServletResponse;
+
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
 import app.restful.webservice.model.EmpPhoneNum;
 import app.restful.webservice.model.Employee;
+import app.restful.webservice.model.Protegrity;
 
 @RestController
 @RequestMapping("/app")
@@ -53,5 +57,16 @@ public class ApplicationController {
 		Employee e = new Employee(1, "Ashish", "Module Lead", "Centurylink",ll);
 		return e;
 	}
+	
+	
+	@GetMapping("/demo/plaintext")
+	@ResponseBody
+	public String methodname(HttpServletResponse response) {
+		response.setContentType("text/plain"); 	 
+		response.setCharacterEncoding("UTF-8");
+			return "Sending Plain text Response";
+		
+	}	
+	
 	
 }
